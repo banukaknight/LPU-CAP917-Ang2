@@ -1,0 +1,58 @@
+<p>form2-bootstrap works!</p>
+
+<p>Creates a top-level FormGroup instance and binds it to a form to track aggregate form value and validation status.</p>
+<p>Creates a FormControl instance from a domain model and binds it to a form control element</p>
+
+
+<h5>{{userForm.value|json}}</h5>
+
+<div class='form-container mb-5'>
+  <h3>Angular Enrolment forms</h3>
+  <form #userForm='ngForm'>
+
+    <div class="form-group w-50">
+      <label for="">Name</label>
+      <input type="text" class="form-control form-control-sm" name="name" ngModel>
+    </div>
+
+    <div ngModelGroup="adress">
+      <div class="form-group w-50">
+        <label for="">Street</label>
+        <input type="text" class="form-control form-control-sm" name="street" ngModel>
+      </div>
+
+      <div class="form-group w-25">
+        <label for="">City</label>
+        <input type="text" class="form-control" name="City" ngModel>
+      </div>
+
+      <div class="form-group w-25">
+        <label for="">state</label>
+        <input type="text" class="form-control" name="state" ngModel>
+      </div>
+    </div>
+
+    <div class="form-group w-25">
+      <label for="">Telephone</label>
+      <input type="number" class="form-control" name="telephone" ngModel>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" value="male" ngModel>
+      <label class="form-check-label" for="inlineRadio1">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" value="female" ngModel>
+      <label class="form-check-label" for="inlineRadio2">Female</label>
+    </div>
+
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="agree" ngModel>
+      <label class="form-check-label" for="exampleCheck1">Agree to Terms</label>
+    </div>
+
+
+
+  </form>
+</div>
