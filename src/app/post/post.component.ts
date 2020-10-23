@@ -21,7 +21,9 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this._p.getcomments().subscribe (data => this.lstcomments=data);
+
     this._p.getposts().subscribe (data => this.lstpost=data);
+    
     this._p.put(opost).subscribe (data => { this.objPut=data;});
 
     var opost = new Post();
