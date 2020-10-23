@@ -13,8 +13,20 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  getcomment():Observable<any>{
+  getcomments():Observable<any>{
+    return this.http.get('https://jsonplaceholder.typicode.com/comments');
+  };
+
+  getposts():Observable<any>{
     return this.http.get('https://jsonplaceholder.typicode.com/posts');
+  };
+
+  post(opost:Post): Observable<any>{
+    return this.http.post('https://jsonplaceholder.typicode.com/posts',opost);
+  };
+
+  put(opost:Post): Observable<any>{
+    return this.http.post('https://jsonplaceholder.typicode.com/posts/1',opost);
   };
 
 }

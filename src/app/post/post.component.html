@@ -1,28 +1,52 @@
+<div class="p-3">
+
 <p>post works!</p>
 <h3>http-observable from web</h3>
 
 <div style="height:400px; width:90vw; overflow-y:auto; margin: auto;">
 <table class="table table-dark table-sm ">
   <tr>
-    <th>UserId</th><th>ID</th><th>Title</th><th>Body</th>
+    <th>PostId</th><th>ID</th><th>Name</th><th>Email</th><th>Body</th>
   </tr>
 
   <tr *ngFor = "let c of lstcomments">
-    <td>{{c.userId}}</td>
+    <td>{{c.postId}}</td>
     <td>{{c.id}}</td>
-    <td>{{c.title}}</td>
+    <td>{{c.name}}</td>
+    <td>{{c.email}}</td>
     <td>{{c.body}}</td>
   </tr>
 </table>
 </div>
 
-
+<h4>lstcomments - json</h4>
 <div style="height:400px; width:90vw; overflow-y:auto; margin: auto;">
 {{lstcomments|json}}
 </div>
+<br><br>
+<h4>lstpost - json</h4>
+<div style="height:400px; width:90vw; overflow-y:auto; margin: auto;">
+{{lstpost|json}}
+</div>
+<br><br>
 
 
-<br><br><br><br>
+<h1>Post Method</h1>
+<p>id: {{objPost?.id}}</p>
+<p>userId: {{objPost?.userId}}</p>
+<p>title: {{objPost?.title}}</p>
+<p>body: {{objPost?.body}}</p>
+
+
+<h1>Put Method</h1>
+<p>id: {{objPut?.id}}</p>
+<p>userId: {{objPut?.userId}}</p>
+<p>title: {{objPut?.title}}</p>
+<p>body: {{objPut?.body}}</p>
+
+
+
+<br><br><br><br><br><br><br><br>
 <h5>Display webpage inside webpage.</h5>
 <div style="width:90vw; margin: auto;">
    <object type="text/html" data="./assets/wp1.html" style="height:400px; width:90vw; overflow:auto; border:5px ridge blue">
@@ -30,3 +54,4 @@
 </div>
 
 <br><br><br><br><br>
+</div>
